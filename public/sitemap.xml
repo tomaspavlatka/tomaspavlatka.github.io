@@ -15,6 +15,12 @@
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
+    <loc>http://localhost:1313/pages/certifications/</loc>
+  </url><url>
+    <loc>http://localhost:1313/pages/cv/</loc>
+  </url><url>
+    <loc>http://localhost:1313/pages/lets-connect/</loc>
+  </url><url>
     <loc>http://localhost:1313/pages/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>

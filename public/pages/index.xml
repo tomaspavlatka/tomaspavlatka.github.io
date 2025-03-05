@@ -14,7 +14,28 @@
       <link>http://localhost:1313/pages/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>tomas@pavlatka.cz (Tomas Moya Pavlatka)</author>
       <guid>http://localhost:1313/pages/about/</guid>
+      <description>&lt;p&gt;Hi, I’m Tomas – a Senior Backend Engineer with 15+ years of experience in software development. I specialize in designing and optimizing high-performance, scalable systems that drive business growth.&lt;/p&gt;&#xA;&lt;p&gt;Over the last years, I contributed to projects impacting millions of orders in the Wayfair Warehouse network. My work included supporting ongoing operations, improving customer-driven enhancements, implementing tools to boost engineering velocity, and leading the transition from a monolith to microservices.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Certificats</title>
+      <link>http://localhost:1313/pages/certifications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>tomas@pavlatka.cz (Tomas Moya Pavlatka)</author>
+      <guid>http://localhost:1313/pages/certifications/</guid>
+      <description>&lt;h2 id=&#34;participation-certificates&#34;&gt;Participation certificates&lt;/h2&gt;&#xA;&lt;p&gt;List of the certifications I have obtain mostly due to course participation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CV, Curriculum vitae</title>
+      <link>http://localhost:1313/pages/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>tomas@pavlatka.cz (Tomas Moya Pavlatka)</author>
+      <guid>http://localhost:1313/pages/cv/</guid>
       <description>&lt;p&gt;My name is Tomas Moya Pavlatka.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Let&#39;s connect</title>
+      <link>http://localhost:1313/pages/lets-connect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>tomas@pavlatka.cz (Tomas Moya Pavlatka)</author>
+      <guid>http://localhost:1313/pages/lets-connect/</guid>
+      <description>&lt;p&gt;The best way to get in touch is via e-mail: &lt;a href=&#34;mailto:tomas@pavlatka.cz&#34;&gt;tomas@pavlatka.cz&lt;/a&gt; &lt;em&gt;(I usually reply within 24 hours)&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -52,6 +52,16 @@ theme = 'beautifulhugo'
     weight = 2
 
 [[menu.main]]
+    name = "CV"
+    url = "pages/cv/"
+    weight = 3
+
+[[menu.main]]
+    name = "Certificates"
+    url = "pages/certificates/"
+    weight = 4
+
+[[menu.main]]
     name = "Let's connect"
     url = "pages/lets-connect/"
-    weight = 3
+    weight = 5
