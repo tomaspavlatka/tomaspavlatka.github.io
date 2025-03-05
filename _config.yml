@@ -216,8 +216,8 @@ sass:
 # _/includes/_4_footer.html.
 
 socialmedia:
-    youtube: PhlowMedia
-    github: phlow
+  #youtube: PhlowMedia
+    github: tomaspavlatka
     # twitter: phlow
     # facebook: phlow.media
     soundcloud: phlow
