@@ -3,6 +3,22 @@ languageCode = 'en-us'
 title = 'Tomas Moya Pavlatka'
 theme = 'beautifulhugo'
 
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = 'lovelace'
+    tabWidth = 2
+    wrapperClass = 'highlight'
+
 [Params]
   subtitle = "The journey of mastering new skills starts by tackling today's challenges head-on."
   mainSections = ["post","posts"]

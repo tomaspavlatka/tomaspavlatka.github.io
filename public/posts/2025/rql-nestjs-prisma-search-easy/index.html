@@ -1,0 +1,849 @@
+
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+ 
+
+
+      <title>Rql&#43;Nestjs&#43;Prisma: Search Made Easy - </title>
+
+  <meta name="description" content="When you build API, you will always come to the state, where you will have to search among data which exists within your system. There are already standards how to deal with GET query parameters, such as
+
+FIQL
+RQL
+
+We chose RQL for our latest project, which is built upon NestJS framework and using prisma ORM as database abstraction.
+What is Resource Query Language (RQL)?
+RQL (Resource Query Language) is a query language designed for filtering and manipulating data in RESTful APIs. It provides a way to perform complex queries using a URL-friendly syntax, allowing operations like filtering, sorting, pagination, and aggregation. RQL is commonly used in APIs to enable flexible and efficient data retrieval without requiring custom query parameters for each use case. Read more about RQL.">
+  <meta name="author" content="Tomas Moya Pavlatka"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Tomas Moya Pavlatka",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/posts\/2025\/rql-nestjs-prisma-search-easy\/",
+          "name": "Rql nestjs prisma search made easy"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Tomas Moya Pavlatka"
+  },
+  "headline": "Rql\u002bNestjs\u002bPrisma: Search Made Easy",
+  "description" : "When you build API, you will always come to the state, where you will have to search among data which exists within your system. There are already standards how to deal with GET query parameters, such as\nFIQL RQL We chose RQL for our latest project, which is built upon NestJS framework and using prisma ORM as database abstraction.\nWhat is Resource Query Language (RQL)? RQL (Resource Query Language) is a query language designed for filtering and manipulating data in RESTful APIs. It provides a way to perform complex queries using a URL-friendly syntax, allowing operations like filtering, sorting, pagination, and aggregation. RQL is commonly used in APIs to enable flexible and efficient data retrieval without requiring custom query parameters for each use case. Read more about RQL.\n",
+  "inLanguage" : "en",
+  "wordCount":  1888 ,
+  "datePublished" : "2025-02-19T09:24:46\u002b01:00",
+  "dateModified" : "2025-02-19T09:24:46\u002b01:00",
+  "image" : "http:\/\/localhost:1313\/img\/tomas_pavlatka_profile.jpeg",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/posts\/2025\/rql-nestjs-prisma-search-easy\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/img\/tomas_pavlatka_profile.jpeg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+
+<meta property="og:title" content="Rql&#43;Nestjs&#43;Prisma: Search Made Easy" />
+<meta property="og:description" content="When you build API, you will always come to the state, where you will have to search among data which exists within your system. There are already standards how to deal with GET query parameters, such as
+
+FIQL
+RQL
+
+We chose RQL for our latest project, which is built upon NestJS framework and using prisma ORM as database abstraction.
+What is Resource Query Language (RQL)?
+RQL (Resource Query Language) is a query language designed for filtering and manipulating data in RESTful APIs. It provides a way to perform complex queries using a URL-friendly syntax, allowing operations like filtering, sorting, pagination, and aggregation. RQL is commonly used in APIs to enable flexible and efficient data retrieval without requiring custom query parameters for each use case. Read more about RQL.">
+<meta property="og:image" content="http://localhost:1313/img/tomas_pavlatka_profile.jpeg" />
+<meta property="og:url" content="http://localhost:1313/posts/2025/rql-nestjs-prisma-search-easy/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Tomas Moya Pavlatka" />
+
+  <meta name="twitter:title" content="Rql&#43;Nestjs&#43;Prisma: Search Made Easy" />
+  <meta name="twitter:description" content="When you build API, you will always come to the state, where you will have to search among data which exists within your system. There are already standards how to deal with GET query parameters, such …">
+  <meta name="twitter:image" content="http://localhost:1313/img/tomas_pavlatka_profile.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='http://localhost:1313/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.145.0">
+  <link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="Tomas Moya Pavlatka"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css" integrity="sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://localhost:1313/css/highlight.min.css" /><link rel="stylesheet" href="http://localhost:1313/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:1313/">Tomas Moya Pavlatka</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/pages/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Let&#39;s connect" href="/pages/lets-connect/">Let&#39;s connect</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Tomas Moya Pavlatka" href="http://localhost:1313/">
+            <img class="avatar-img" src="http://localhost:1313/img/tomas_pavlatka_profile.jpeg" alt="Tomas Moya Pavlatka" />
+           
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-heading">
+              
+                <h1>Rql&#43;Nestjs&#43;Prisma: Search Made Easy</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>When you build API, you will always come to the state, where you will have to search among data which exists within your system. There are already standards how to deal with GET query parameters, such as</p>
+<ul>
+<li><a href="https://tools.ietf.org/html/draft-nottingham-atompub-fiql-00">FIQL</a></li>
+<li><a href="https://dundalek.com/rql/draft-zyp-rql-00.html">RQL</a></li>
+</ul>
+<p>We chose RQL for our latest project, which is built upon <a href="https://nestjs.com/">NestJS</a> framework and using <a href="https://www.prisma.io/">prisma</a> ORM as database abstraction.</p>
+<h2 id="what-is-resource-query-language-rql">What is Resource Query Language (RQL)?</h2>
+<p>RQL (Resource Query Language) is a query language designed for filtering and manipulating data in RESTful APIs. It provides a way to perform complex queries using a URL-friendly syntax, allowing operations like filtering, sorting, pagination, and aggregation. RQL is commonly used in APIs to enable flexible and efficient data retrieval without requiring custom query parameters for each use case. Read more about <a href="https://www.sitepen.com/blog/resource-query-language-a-query-language-for-the-web-nosql">RQL</a>.</p>
+<p>Our goal is to receive URLs like <code>GET /contracts?q=eq(id,1234)</code> and translate to SQL <code>SELECT * FROM contacts WHERE id = 1234</code>.</p>
+<h2 id="rqlservice--map-raw-rql-into-workable-results">RqlService — map raw RQL into workable results</h2>
+<p>The goal of this service is to take a raw RQL statement and convert it to RqlResult . Do not be overwhelmed by the code underneath, I will explain each part as we go.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">type</span> OrderBy <span style="color:#666">=</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#666">|</span> <span style="color:#888">{</span> <span style="color:#888">[</span>x: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">]</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;asc&#39;</span> <span style="color:#666">|</span> <span style="color:#b83838">&#39;desc&#39;</span> <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#666">|</span> <span style="color:#888">{</span> <span style="color:#888">[</span>x: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">]</span><span style="color:#666">:</span> <span style="color:#888">{</span> <span style="color:#888">[</span>y: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">]</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;asc&#39;</span> <span style="color:#666">|</span> <span style="color:#b83838">&#39;desc&#39;</span> <span style="color:#888">}</span> <span style="color:#888">};</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">export</span> <span style="color:#2838b0">type</span> RqlWhereType <span style="color:#666">=</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#666">|</span> <span style="color:#888">{</span> <span style="color:#888">[</span>x: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">]</span><span style="color:#666">:</span> <span style="color:#888">{</span> <span style="color:#888">[</span>y: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">]</span><span style="color:#666">:</span> <span style="color:#888">{</span> <span style="color:#888">[</span>z: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">]</span><span style="color:#666">:</span> <span style="color:#444;font-style:italic">null</span> <span style="color:#666">|</span> <span style="color:#2838b0;font-style:italic">number</span> <span style="color:#666">|</span> <span style="color:#2838b0;font-style:italic">string</span> <span style="color:#888">}</span> <span style="color:#888">}</span> <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#666">|</span> <span style="color:#888">{</span> <span style="color:#888">[</span>x: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">]</span><span style="color:#666">:</span> <span style="color:#888">{</span> <span style="color:#888">[</span>y: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">]</span><span style="color:#666">:</span> <span style="color:#444;font-style:italic">null</span> <span style="color:#666">|</span> <span style="color:#2838b0;font-style:italic">number</span> <span style="color:#666">|</span> <span style="color:#2838b0;font-style:italic">string</span> <span style="color:#888">}</span> <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#666">|</span> <span style="color:#888">{</span> <span style="color:#888">[</span>x: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">]</span><span style="color:#666">:</span> <span style="color:#444;font-style:italic">null</span> <span style="color:#888">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">export</span> <span style="color:#2838b0">type</span> RqlWhereOption <span style="color:#666">=</span> <span style="color:#888">{</span> <span style="color:#888">[</span>x: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">]</span><span style="color:#666">:</span> RqlWhereType<span style="color:#888">[]</span> <span style="color:#888">}</span> <span style="color:#666">|</span> RqlWhereType<span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">type</span> RqlResult <span style="color:#666">=</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  hardLimit: <span style="color:#2838b0;font-style:italic">number</span><span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>  limit: <span style="color:#2838b0;font-style:italic">number</span><span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>  offset: <span style="color:#2838b0;font-style:italic">number</span><span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>  orderBy: <span style="color:#2838b0;font-style:italic">OrderBy</span><span style="color:#888">[];</span>
+</span></span><span style="display:flex;"><span>  where: <span style="color:#2838b0;font-style:italic">RqlWhereOption</span><span style="color:#888">[];</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><h3 id="either-detour">Either detour</h3>
+<p>The following example will use concept of Either and therefore it’s important to understand how it’s used. Either is functional programming error handling. It’s alternative to try/catch blocks. Either is a type that can contain only 2 possible values, either one or the other (no both!):</p>
+<ul>
+<li>An error value (called Left by convention)</li>
+<li>A successful return value (called Right by convention)</li>
+</ul>
+<p>Another benefit of this approach is that you can “pipe” operations together, similary to linux pipe, provided that you stay on the same side.</p>
+<p>Read more about Either: <a href="https://www.sandromaglione.com/articles/either-error-handling-functional-programming">https://www.sandromaglione.com/articles/either-error-handling-functional-programming</a></p>
+<h3 id="context-detour">Context detour</h3>
+<p>Throughout the RqlService, we are going to work with Context.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">type</span> Context <span style="color:#666">=</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  hardLimit: <span style="color:#2838b0;font-style:italic">number</span><span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>  limit: <span style="color:#2838b0;font-style:italic">number</span><span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>  offset: <span style="color:#2838b0;font-style:italic">number</span><span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>  orderBy: <span style="color:#2838b0;font-style:italic">OrderBy</span><span style="color:#888">[];</span>
+</span></span><span style="display:flex;"><span>  rqls: <span style="color:#2838b0;font-style:italic">RqlInstruction</span><span style="color:#888">[];</span>
+</span></span><span style="display:flex;"><span>  supportedColumns: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">[];</span>
+</span></span><span style="display:flex;"><span>  where: <span style="color:#2838b0;font-style:italic">RqlWhereOption</span><span style="color:#888">[];</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">};</span>
+</span></span></code></pre></div><p>We build this at the start, pass it any private function where it’s content will be modified accordingly.</p>
+<h4 id="step-0-parse-function">Step 0: Parse function</h4>
+<p>RqlService has parse function which is responsible to take raw RQL statement and convert it to RqlResult . Let’s go though each step individually.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span>parse<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>  rql: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>  supportedColumns: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">[]</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">)</span><span style="color:#666">:</span> Either<span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">RqlResult</span><span style="color:#888">&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> ctx: <span style="color:#2838b0;font-style:italic">Context</span> <span style="color:#666">=</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    hardLimit: <span style="color:#2838b0;font-style:italic">MAX_LIMIT</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>    limit: <span style="color:#2838b0;font-style:italic">10</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>    offset: <span style="color:#2838b0;font-style:italic">0</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>    orderBy<span style="color:#666">:</span> <span style="color:#888">[{</span> createdAt<span style="color:#666">:</span> <span style="color:#b83838">&#39;asc&#39;</span> <span style="color:#888">}],</span>
+</span></span><span style="display:flex;"><span>    rqls: <span style="color:#2838b0;font-style:italic">this.parseRQL</span><span style="color:#888">(</span>rql<span style="color:#888">),</span>
+</span></span><span style="display:flex;"><span>    supportedColumns<span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>    where<span style="color:#666">:</span> <span style="color:#888">[],</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">};</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">return</span> <span style="color:#2838b0">this</span><span style="color:#888">.</span>getLimitOffset<span style="color:#888">(</span>ctx<span style="color:#888">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">.</span>bind<span style="color:#888">((</span>ctx<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> <span style="color:#2838b0">this</span><span style="color:#888">.</span>getOrderBy<span style="color:#888">(</span>ctx<span style="color:#888">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">.</span>bind<span style="color:#888">((</span>ctx<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> <span style="color:#2838b0">this</span><span style="color:#888">.</span>getFilters<span style="color:#888">(</span>ctx<span style="color:#888">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">.</span>bind<span style="color:#888">((</span>ctx<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> <span style="color:#2838b0">this</span><span style="color:#888">.</span>toResponse<span style="color:#888">(</span>ctx<span style="color:#888">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><h4 id="step-1-parse-raw-rql-into-instructions">Step 1: Parse raw RQL into instructions</h4>
+<p>Our goal is to transform raw RQL statement into an array of instructions we can work later with. RqlInstruction will hold information about operation which is requested and array of the args arguments, that comes with it.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">type</span> RqlInstruction <span style="color:#666">=</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  args: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">[],</span>
+</span></span><span style="display:flex;"><span>  operation: <span style="color:#2838b0;font-style:italic">string</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><p>Ex. if we get <code>eq(id,1234)</code> would be transform into</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">const</span> instruction: <span style="color:#2838b0;font-style:italic">RqlInstruction</span> <span style="color:#666">=</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  operation<span style="color:#666">:</span> <span style="color:#b83838">&#39;eq&#39;</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>  args<span style="color:#666">:</span> <span style="color:#888">[</span><span style="color:#b83838">&#39;id&#39;</span><span style="color:#888">,</span> <span style="color:#b83838">&#39;1234&#39;</span><span style="color:#888">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">private</span> parseRQL<span style="color:#888">(</span>rql: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">)</span><span style="color:#666">:</span> RqlInstruction<span style="color:#888">[]</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> groupPattern <span style="color:#666">=</span> <span style="color:#a848a8">/(\w+)?\[([^\[\]]+)\]/g</span><span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> groups <span style="color:#666">=</span> <span style="color:#388038">Array</span><span style="color:#888">.</span><span style="color:#2838b0">from</span><span style="color:#888">(</span>rql<span style="color:#888">.</span>matchAll<span style="color:#888">(</span>groupPattern<span style="color:#888">));</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> instrs: <span style="color:#2838b0;font-style:italic">RqlInstruction</span><span style="color:#888">[]</span> <span style="color:#666">=</span> <span style="color:#888">[];</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0;font-style:italic">let</span> rest <span style="color:#666">=</span> rql<span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  groups<span style="color:#888">.</span>forEach<span style="color:#888">(([</span>raw<span style="color:#888">,</span> operation<span style="color:#888">,</span> args<span style="color:#888">])</span> <span style="color:#666">=&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">if</span> <span style="color:#888">(</span>operation <span style="color:#666">===</span> <span style="color:#b83838">&#39;or&#39;</span><span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>      instrs<span style="color:#888">.</span>push<span style="color:#888">({</span> args<span style="color:#666">:</span> <span style="color:#888">[</span>args<span style="color:#888">],</span> operation<span style="color:#666">:</span> <span style="color:#b83838">&#39;or&#39;</span> <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">}</span> <span style="color:#2838b0">else</span> <span style="color:#2838b0">if</span> <span style="color:#888">(</span>operation <span style="color:#666">===</span> <span style="color:#b83838">&#39;not&#39;</span><span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>      instrs<span style="color:#888">.</span>push<span style="color:#888">({</span> args<span style="color:#666">:</span> <span style="color:#888">[</span>args<span style="color:#888">],</span> operation<span style="color:#666">:</span> <span style="color:#b83838">&#39;not&#39;</span> <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>    rest <span style="color:#666">=</span> rest<span style="color:#888">.</span>replace<span style="color:#888">(</span>raw<span style="color:#888">,</span> <span style="color:#b83838">&#39;&#39;</span><span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">this</span><span style="color:#888">.</span>parseInstructions<span style="color:#888">(</span>rest<span style="color:#888">).</span>forEach<span style="color:#888">((</span>instr<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> instrs<span style="color:#888">.</span>push<span style="color:#888">(</span>instr<span style="color:#888">));</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">return</span> instrs<span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><p>We actually have 2 special instructions, one for <code>or</code> and another for <code>not</code> operations. Let’s check or example, but the same also applies to not operation.</p>
+<p>Let’s imagine we need to find data where <code>firstName</code> is either John or Smith. Then we would use this RQL instruction <code>or[eq(firstName,John)eq(firstName,Smit)]</code></p>
+<h4 id="step-2-extract-limit-and-offset">Step 2: Extract limit and offset</h4>
+<p>We support actually 2 variants how to pass limit conditions</p>
+<ul>
+<li><code>limit(100)</code> — we want the first 100 results, starting with offset 0 (therefore offset can be omitted).</li>
+<li><code>limit(100, 10)</code> — we want 100 results, but skipping the first 10 results. In human language, we want results from 11th onwards.</li>
+</ul>
+<p>To figure out what <em>limit</em> and <em>offset</em> should be used, let’s traverse over the instructions and find the one where operation is equal to limit . Let’s also validate that limit is not above max limit supported by the API, usually 100. It’s not a good idea to pull all data from your data source as this might bring unpredictable overload to your system (beside other challenges).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">private</span> getLimitOffset<span style="color:#888">(</span>ctx: <span style="color:#2838b0;font-style:italic">Context</span><span style="color:#888">)</span><span style="color:#666">:</span> Either<span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">Context</span><span style="color:#888">&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> ask <span style="color:#666">=</span> ctx<span style="color:#888">.</span>rqls<span style="color:#888">.</span>find<span style="color:#888">((</span>o<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> o<span style="color:#888">.</span>operation <span style="color:#666">===</span> <span style="color:#b83838">&#39;limit&#39;</span><span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> <span style="color:#888">(</span><span style="color:#666">!</span>ask<span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>right<span style="color:#888">(</span>ctx<span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> limit <span style="color:#666">=</span> ask<span style="color:#888">.</span>args<span style="color:#888">[</span><span style="color:#444">0</span><span style="color:#888">];</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> <span style="color:#888">(</span><span style="color:#666">+</span>limit <span style="color:#666">&gt;</span> MAX_LIMIT<span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>left<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>      InvalidValueException<span style="color:#888">.</span>create<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b83838">&#39;limit&#39;</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b83838">`Limit must be a number lower or equal to </span><span style="color:#b83838;text-decoration:underline">${</span>MAX_LIMIT<span style="color:#b83838;text-decoration:underline">}</span><span style="color:#b83838">`</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#444">400</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#888">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>right<span style="color:#888">({</span> <span style="color:#888">...</span>ctx<span style="color:#888">,</span> limit<span style="color:#666">:</span> <span style="color:#666">+</span>limit<span style="color:#888">,</span> offset<span style="color:#666">:</span> <span style="color:#666">+</span><span style="color:#888">(</span>ask<span style="color:#888">.</span>args<span style="color:#888">[</span><span style="color:#444">1</span><span style="color:#888">]</span> <span style="color:#666">||</span> <span style="color:#444">0</span><span style="color:#888">)</span> <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><h4 id="step-3-extract-information-how-to-sort-data">Step 3: Extract information how to sort data</h4>
+<p>To be able to set how data should be sorted, you have to use sort operation. Data will be sorted by the specified column in ascending order. If you want to sort them in descending order, prefix the name of the column by — (dash)</p>
+<ul>
+<li><code>sort(createdAt)</code> — data will be sorted by createdAt column in ascending order, meaning from 0 to 9</li>
+<li><code>sort(-createdAt)</code> — data will be sorted by createdAt column in descending order, meaning from 9 to 0.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">private</span> getOrderBy<span style="color:#888">(</span>ctx: <span style="color:#2838b0;font-style:italic">Context</span><span style="color:#888">)</span><span style="color:#666">:</span> Either<span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">Context</span><span style="color:#888">&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> ask <span style="color:#666">=</span> ctx<span style="color:#888">.</span>rqls<span style="color:#888">.</span>find<span style="color:#888">((</span>o<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> o<span style="color:#888">.</span>operation <span style="color:#666">===</span> <span style="color:#b83838">&#39;sort&#39;</span><span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> <span style="color:#888">(</span><span style="color:#666">!</span>ask<span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>right<span style="color:#888">(</span>ctx<span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> orderBy <span style="color:#666">=</span> ask<span style="color:#888">.</span>args
+</span></span><span style="display:flex;"><span>    <span style="color:#888">.</span>filter<span style="color:#888">((</span>s<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> s <span style="color:#666">!==</span> <span style="color:#444;font-style:italic">undefined</span><span style="color:#888">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">.</span>map<span style="color:#888">((</span>s<span style="color:#888">)</span><span style="color:#666">:</span> Either<span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">OrderBy</span><span style="color:#888">&gt;</span> <span style="color:#666">=&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#2838b0">const</span> direction <span style="color:#666">=</span> s<span style="color:#888">.</span>startsWith<span style="color:#888">(</span><span style="color:#b83838">&#39;-&#39;</span><span style="color:#888">)</span> <span style="color:#666">?</span> <span style="color:#b83838">&#39;desc&#39;</span> <span style="color:#666">:</span> <span style="color:#b83838">&#39;asc&#39;</span><span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#2838b0">const</span> key <span style="color:#666">=</span> s<span style="color:#888">.</span>startsWith<span style="color:#888">(</span><span style="color:#b83838">&#39;-&#39;</span><span style="color:#888">)</span> <span style="color:#666">||</span> s<span style="color:#888">.</span>startsWith<span style="color:#888">(</span><span style="color:#b83838">&#39;+&#39;</span><span style="color:#888">)</span> <span style="color:#666">?</span> s<span style="color:#888">.</span>slice<span style="color:#888">(</span><span style="color:#444">1</span><span style="color:#888">)</span> <span style="color:#666">:</span> s<span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#2838b0">return</span> <span style="color:#666">!</span>ctx<span style="color:#888">.</span>supportedColumns<span style="color:#888">.</span>includes<span style="color:#888">(</span>key<span style="color:#888">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">?</span> Either<span style="color:#888">.</span>left<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>            InvalidValueException<span style="color:#888">.</span>create<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#b83838">&#39;sort&#39;</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#b83838">`Invalid sort key: </span><span style="color:#b83838;text-decoration:underline">${</span>key<span style="color:#b83838;text-decoration:underline">}</span><span style="color:#b83838">`</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>              <span style="color:#444">400</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#888">),</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#888">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#666">:</span> Either<span style="color:#888">.</span>right<span style="color:#888">({</span> <span style="color:#888">[</span>key<span style="color:#888">]</span><span style="color:#666">:</span> direction <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> leftValue <span style="color:#666">=</span> orderBy<span style="color:#888">.</span>find<span style="color:#888">((</span>d<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> d<span style="color:#888">.</span>isLeft<span style="color:#888">());</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> <span style="color:#888">(</span>leftValue<span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>left<span style="color:#888">(</span>leftValue<span style="color:#888">.</span>getLeft<span style="color:#888">());</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>right<span style="color:#888">({</span> <span style="color:#888">...</span>ctx<span style="color:#888">,</span> orderBy: <span style="color:#2838b0;font-style:italic">orderBy.map</span><span style="color:#888">((</span>d<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> d<span style="color:#888">.</span>getRight<span style="color:#888">())</span> <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><h4 id="step-4-lets-figure-out-the-filters">Step 4: Let’s figure out the filters</h4>
+<p>It’s time to finally deal with search condition as we are done with limit and order part.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">private</span> getFilters<span style="color:#888">(</span>ctx: <span style="color:#2838b0;font-style:italic">Context</span><span style="color:#888">)</span><span style="color:#666">:</span> Either<span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">Context</span><span style="color:#888">&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> filters <span style="color:#666">=</span> ctx<span style="color:#888">.</span>rqls
+</span></span><span style="display:flex;"><span>    <span style="color:#888">.</span>filter<span style="color:#888">((</span>o<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> o<span style="color:#888">.</span>operation <span style="color:#666">!==</span> <span style="color:#b83838">&#39;sort&#39;</span><span style="color:#888">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">.</span>filter<span style="color:#888">((</span>o<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> o<span style="color:#888">.</span>operation <span style="color:#666">!==</span> <span style="color:#b83838">&#39;limit&#39;</span><span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> <span style="color:#888">(</span><span style="color:#666">!</span>filters<span style="color:#888">.</span>length<span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>right<span style="color:#888">(</span>ctx<span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> where <span style="color:#666">=</span> filters<span style="color:#888">.</span>map<span style="color:#888">((</span>f<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> <span style="color:#2838b0">this</span><span style="color:#888">.</span>mapFilter<span style="color:#888">(</span>f<span style="color:#888">,</span> ctx<span style="color:#888">));</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> leftValue <span style="color:#666">=</span> where<span style="color:#888">.</span>find<span style="color:#888">((</span>d<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> d<span style="color:#888">.</span>isLeft<span style="color:#888">());</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">return</span> leftValue
+</span></span><span style="display:flex;"><span>    <span style="color:#666">?</span> Either<span style="color:#888">.</span>left<span style="color:#888">(</span>leftValue<span style="color:#888">.</span>getLeft<span style="color:#888">())</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">:</span> Either<span style="color:#888">.</span>right<span style="color:#888">({</span> <span style="color:#888">...</span>ctx<span style="color:#888">,</span> where: <span style="color:#2838b0;font-style:italic">where.map</span><span style="color:#888">((</span>d<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> d<span style="color:#888">.</span>getRight<span style="color:#888">())</span> <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><h5 id="step-41-find-filter-instructions">Step 4.1: Find filter instructions</h5>
+<p>The only thing we need to do is to iterate over the rql instructions and filter out those for sorting and for limit. We then remain with array of instructions, which provide conditions we use to find data.</p>
+<h5 id="step-42-map-each-instruction-into-a-where-statement">Step 4.2: Map each instruction into a where statement</h5>
+<p>In first step, we find out all filter instruction and then map each one of them to a where statement. Let’s have a look how it’s done.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">private</span> mapFilter<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>  instr: <span style="color:#2838b0;font-style:italic">RqlInstruction</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>  ctx: <span style="color:#2838b0;font-style:italic">Context</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">)</span><span style="color:#666">:</span> Either<span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">RqlWhereOption</span><span style="color:#888">&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">return</span> <span style="color:#2838b0">this</span><span style="color:#888">.</span>validateFilterValue<span style="color:#888">(</span>instr<span style="color:#888">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">.</span>bind<span style="color:#888">((</span>instr<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> <span style="color:#2838b0">this</span><span style="color:#888">.</span>validateOperation<span style="color:#888">(</span>instr<span style="color:#888">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">.</span>bind<span style="color:#888">((</span>instr<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> <span style="color:#2838b0">this</span><span style="color:#888">.</span>validateColumn<span style="color:#888">(</span>instr<span style="color:#888">,</span> ctx<span style="color:#888">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">.</span>bind<span style="color:#888">((</span>instr<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> <span style="color:#2838b0">this</span><span style="color:#888">.</span>toWhere<span style="color:#888">(</span>instr<span style="color:#888">,</span> ctx<span style="color:#888">));</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><h5 id="step-421-validate-value-of-the-instructions">Step 4.2.1: Validate value of the instructions</h5>
+<p>As mentioned couple of times, we support different instructions and each of them have different conditions for their values. Let’s ensure we provided valid RQL statement.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">private</span> validateFilterValue<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>  instr: <span style="color:#2838b0;font-style:italic">RqlInstruction</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">)</span><span style="color:#666">:</span> Either<span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">RqlInstruction</span><span style="color:#888">&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> <span style="color:#888">([</span><span style="color:#b83838">&#39;and&#39;</span><span style="color:#888">,</span> <span style="color:#b83838">&#39;or&#39;</span><span style="color:#888">,</span> <span style="color:#b83838">&#39;not&#39;</span><span style="color:#888">,</span> <span style="color:#b83838">&#39;null&#39;</span><span style="color:#888">].</span>includes<span style="color:#888">(</span>instr<span style="color:#888">.</span>operation<span style="color:#888">))</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> instr<span style="color:#888">.</span>args<span style="color:#888">.</span>length <span style="color:#666">==</span> <span style="color:#444">1</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#666">?</span> Either<span style="color:#888">.</span>right<span style="color:#888">(</span>instr<span style="color:#888">)</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#666">:</span> Either<span style="color:#888">.</span>left<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>          MissingValueException<span style="color:#888">.</span>create<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b83838">`filter:</span><span style="color:#b83838;text-decoration:underline">${</span>instr<span style="color:#888">.</span>operation<span style="color:#b83838;text-decoration:underline">}</span><span style="color:#b83838">`</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#b83838">&#39;Filter has to have a value&#39;</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#444">400</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#888">),</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> <span style="color:#888">(</span>instr<span style="color:#888">.</span>args<span style="color:#888">.</span>length <span style="color:#666">!=</span> <span style="color:#444">2</span><span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>left<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>      MissingValueException<span style="color:#888">.</span>create<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b83838">`filter:</span><span style="color:#b83838;text-decoration:underline">${</span>instr<span style="color:#888">.</span>operation<span style="color:#b83838;text-decoration:underline">}</span><span style="color:#b83838">`</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b83838">&#39;Filter has to have a value&#39;</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#444">400</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#888">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> operation <span style="color:#666">=</span> operationsMap<span style="color:#888">[</span>instr<span style="color:#888">.</span>operation <span style="color:#2838b0">as</span> Operation<span style="color:#888">];</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> <span style="color:#888">(</span>operation<span style="color:#888">.</span><span style="color:#2838b0">type</span> <span style="color:#666">===</span> <span style="color:#b83838">&#39;string&#39;</span> <span style="color:#666">&amp;&amp;</span> <span style="color:#666">!</span>isString<span style="color:#888">(</span>instr<span style="color:#888">.</span>args<span style="color:#888">[</span><span style="color:#444">1</span><span style="color:#888">]))</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>left<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>      InvalidValueException<span style="color:#888">.</span>create<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b83838">`filter:</span><span style="color:#b83838;text-decoration:underline">${</span>instr<span style="color:#888">.</span>operation<span style="color:#b83838;text-decoration:underline">}</span><span style="color:#b83838">`</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b83838">&#39;Value has to be string&#39;</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#444">400</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#888">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> <span style="color:#888">(</span>operation<span style="color:#888">.</span><span style="color:#2838b0">type</span> <span style="color:#666">===</span> <span style="color:#b83838">&#39;number&#39;</span> <span style="color:#666">&amp;&amp;</span> <span style="color:#666">!</span>isNumberString<span style="color:#888">(</span>instr<span style="color:#888">.</span>args<span style="color:#888">[</span><span style="color:#444">1</span><span style="color:#888">]))</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>left<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>      InvalidValueException<span style="color:#888">.</span>create<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b83838">`filter:</span><span style="color:#b83838;text-decoration:underline">${</span>instr<span style="color:#888">.</span>operation<span style="color:#b83838;text-decoration:underline">}</span><span style="color:#b83838">`</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b83838">&#39;Value has to be numberic&#39;</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#444">400</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#888">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>right<span style="color:#888">(</span>instr<span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><h5 id="step-422-validate-the-operation-is-supported">Step 4.2.2: Validate the operation is supported</h5>
+<p>Let’s ensure that the operation is actually supported.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">const</span> operationsMap: <span style="color:#2838b0;font-style:italic">Record</span><span style="color:#888">&lt;</span><span style="color:#2838b0">Operation</span><span style="color:#888">,</span> <span style="color:#888">{</span> <span style="color:#388038">alias</span><span style="background-color:#a848a8">:</span> <span style="color:#388038">string</span><span style="background-color:#a848a8">;</span> <span style="color:#388038">type</span><span style="background-color:#a848a8">:</span> <span style="color:#388038">string</span> <span style="color:#888">}&gt;</span> <span style="color:#666">=</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  and<span style="color:#666">:</span> <span style="color:#888">{</span> alias<span style="color:#666">:</span> <span style="color:#b83838">&#39;AND&#39;</span><span style="color:#888">,</span> <span style="color:#2838b0">type</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;string&#39;</span> <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>  not<span style="color:#666">:</span> <span style="color:#888">{</span> alias<span style="color:#666">:</span> <span style="color:#b83838">&#39;NOT&#39;</span><span style="color:#888">,</span> <span style="color:#2838b0">type</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;string&#39;</span> <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>  contains<span style="color:#666">:</span> <span style="color:#888">{</span> alias<span style="color:#666">:</span> <span style="color:#b83838">&#39;contains&#39;</span><span style="color:#888">,</span> <span style="color:#2838b0">type</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;string&#39;</span> <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>  ends<span style="color:#666">:</span> <span style="color:#888">{</span> alias<span style="color:#666">:</span> <span style="color:#b83838">&#39;endsWith&#39;</span><span style="color:#888">,</span> <span style="color:#2838b0">type</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;string&#39;</span> <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>  eq<span style="color:#666">:</span> <span style="color:#888">{</span> alias<span style="color:#666">:</span> <span style="color:#b83838">&#39;equals&#39;</span><span style="color:#888">,</span> <span style="color:#2838b0">type</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;string&#39;</span> <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>  gt<span style="color:#666">:</span> <span style="color:#888">{</span> alias<span style="color:#666">:</span> <span style="color:#b83838">&#39;gt&#39;</span><span style="color:#888">,</span> <span style="color:#2838b0">type</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;number&#39;</span> <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>  gte<span style="color:#666">:</span> <span style="color:#888">{</span> alias<span style="color:#666">:</span> <span style="color:#b83838">&#39;gte&#39;</span><span style="color:#888">,</span> <span style="color:#2838b0">type</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;number&#39;</span> <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>  lt<span style="color:#666">:</span> <span style="color:#888">{</span> alias<span style="color:#666">:</span> <span style="color:#b83838">&#39;lt&#39;</span><span style="color:#888">,</span> <span style="color:#2838b0">type</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;number&#39;</span> <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>  lte<span style="color:#666">:</span> <span style="color:#888">{</span> alias<span style="color:#666">:</span> <span style="color:#b83838">&#39;lte&#39;</span><span style="color:#888">,</span> <span style="color:#2838b0">type</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;number&#39;</span> <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#444;font-style:italic">null</span><span style="color:#666">:</span> <span style="color:#888">{</span> alias<span style="color:#666">:</span> <span style="color:#b83838">&#39;null&#39;</span><span style="color:#888">,</span> <span style="color:#2838b0">type</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;null&#39;</span> <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>  or<span style="color:#666">:</span> <span style="color:#888">{</span> alias<span style="color:#666">:</span> <span style="color:#b83838">&#39;OR&#39;</span><span style="color:#888">,</span> <span style="color:#2838b0">type</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;string&#39;</span> <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>  starts<span style="color:#666">:</span> <span style="color:#888">{</span> alias<span style="color:#666">:</span> <span style="color:#b83838">&#39;startsWith&#39;</span><span style="color:#888">,</span> <span style="color:#2838b0">type</span><span style="color:#666">:</span> <span style="color:#b83838">&#39;string&#39;</span> <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">};</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">private</span> validateOperation<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>  instr: <span style="color:#2838b0;font-style:italic">RqlInstruction</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">)</span><span style="color:#666">:</span> Either<span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">RqlInstruction</span><span style="color:#888">&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">return</span> <span style="color:#666">!</span>operationsMap<span style="color:#888">[</span>instr<span style="color:#888">.</span>operation <span style="color:#2838b0">as</span> Operation<span style="color:#888">]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">?</span> Either<span style="color:#888">.</span>left<span style="color:#888">(</span>UnknownFilterException<span style="color:#888">.</span>create<span style="color:#888">(</span><span style="color:#b83838">`filter:</span><span style="color:#b83838;text-decoration:underline">${</span>instr<span style="color:#888">.</span>operation<span style="color:#b83838;text-decoration:underline">}</span><span style="color:#b83838">`</span><span style="color:#888">))</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">:</span> Either<span style="color:#888">.</span>right<span style="color:#888">(</span>instr<span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><h5 id="step-423-validate-that-column-is-supported">Step 4.2.3: Validate that column is supported</h5>
+<p>Let’s ensure that the column actually exists on the resource we are dealing with.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">private</span> validateColumn<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>  instr: <span style="color:#2838b0;font-style:italic">RqlInstruction</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>  ctx: <span style="color:#2838b0;font-style:italic">Context</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">)</span><span style="color:#666">:</span> Either<span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">RqlInstruction</span><span style="color:#888">&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888;font-style:italic">// We do not need to validate columns neither for AND, nor for OR and NOT operations
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>  <span style="color:#888;font-style:italic">// they are not dealing with the columns but rather with set of filters
+</span></span></span><span style="display:flex;"><span><span style="color:#888;font-style:italic"></span>  <span style="color:#2838b0">if</span> <span style="color:#888">([</span><span style="color:#b83838">&#39;and&#39;</span><span style="color:#888">,</span> <span style="color:#b83838">&#39;or&#39;</span><span style="color:#888">,</span> <span style="color:#b83838">&#39;not&#39;</span><span style="color:#888">].</span>includes<span style="color:#888">(</span>instr<span style="color:#888">.</span>operation<span style="color:#888">))</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>right<span style="color:#888">(</span>instr<span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> column <span style="color:#666">=</span> instr<span style="color:#888">.</span>args<span style="color:#888">[</span><span style="color:#444">0</span><span style="color:#888">];</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">return</span> <span style="color:#666">!</span>ctx<span style="color:#888">.</span>supportedColumns<span style="color:#888">.</span>includes<span style="color:#888">(</span>column<span style="color:#888">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">?</span> Either<span style="color:#888">.</span>left<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>        InvalidValueException<span style="color:#888">.</span>create<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#b83838">`filter:</span><span style="color:#b83838;text-decoration:underline">${</span>instr<span style="color:#888">.</span>operation<span style="color:#b83838;text-decoration:underline">}</span><span style="color:#b83838">:</span><span style="color:#b83838;text-decoration:underline">${</span>column<span style="color:#b83838;text-decoration:underline">}</span><span style="color:#b83838">`</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#b83838">`Property </span><span style="color:#b83838;text-decoration:underline">${</span>column<span style="color:#b83838;text-decoration:underline">}</span><span style="color:#b83838"> does not exist`</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#444">400</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#888">),</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#888">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#666">:</span> Either<span style="color:#888">.</span>right<span style="color:#888">(</span>instr<span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><h5 id="step-424-map-to-where-statement">Step 4.2.4: Map to where statement</h5>
+<p>Finally we are at position, where we can map the filter instruction into a where statement.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">private</span> toWhere<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>  instr: <span style="color:#2838b0;font-style:italic">RqlInstruction</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>  ctx: <span style="color:#2838b0;font-style:italic">Context</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">)</span><span style="color:#666">:</span> Either<span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">RqlWhereOption</span><span style="color:#888">&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> <span style="color:#888">([</span><span style="color:#b83838">&#39;and&#39;</span><span style="color:#888">,</span> <span style="color:#b83838">&#39;or&#39;</span><span style="color:#888">,</span> <span style="color:#b83838">&#39;not&#39;</span><span style="color:#888">].</span>includes<span style="color:#888">(</span>instr<span style="color:#888">.</span>operation<span style="color:#888">))</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">const</span> wheres <span style="color:#666">=</span> <span style="color:#2838b0">this</span><span style="color:#888">.</span>parseInstructions<span style="color:#888">(</span>instr<span style="color:#888">.</span>args<span style="color:#888">[</span><span style="color:#444">0</span><span style="color:#888">]).</span>map<span style="color:#888">((</span>f<span style="color:#888">)</span> <span style="color:#666">=&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#2838b0">this</span><span style="color:#888">.</span>mapFilter<span style="color:#888">(</span>f<span style="color:#888">,</span> ctx<span style="color:#888">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">const</span> leftValue <span style="color:#666">=</span> wheres<span style="color:#888">.</span>find<span style="color:#888">((</span>f<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> f<span style="color:#888">.</span>isLeft<span style="color:#888">());</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> leftValue
+</span></span><span style="display:flex;"><span>      <span style="color:#666">?</span> Either<span style="color:#888">.</span>left<span style="color:#888">(</span>leftValue<span style="color:#888">.</span>getLeft<span style="color:#888">())</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#666">:</span> Either<span style="color:#888">.</span>right<span style="color:#888">({</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#888">[</span>instr<span style="color:#888">.</span>operation<span style="color:#888">.</span>toUpperCase<span style="color:#888">()]</span><span style="color:#666">:</span> <span style="color:#2838b0">this</span><span style="color:#888">.</span>toWhereSingle<span style="color:#888">(</span>wheres<span style="color:#888">),</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">const</span> operation <span style="color:#666">=</span> operationsMap<span style="color:#888">[</span>instr<span style="color:#888">.</span>operation <span style="color:#2838b0">as</span> Operation<span style="color:#888">];</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> <span style="color:#888">(</span>operation<span style="color:#888">.</span><span style="color:#2838b0">type</span> <span style="color:#666">===</span> <span style="color:#b83838">&#39;number&#39;</span><span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>right<span style="color:#888">({</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#888">[</span>instr<span style="color:#888">.</span>args<span style="color:#888">[</span><span style="color:#444">0</span><span style="color:#888">]]</span><span style="color:#666">:</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#888">[</span>operationsMap<span style="color:#888">[</span>instr<span style="color:#888">.</span>operation <span style="color:#2838b0">as</span> Operation<span style="color:#888">].</span>alias<span style="color:#888">]</span><span style="color:#666">:</span> <span style="color:#666">+</span>instr<span style="color:#888">.</span>args<span style="color:#888">[</span><span style="color:#444">1</span><span style="color:#888">],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">if</span> <span style="color:#888">(</span>operation<span style="color:#888">.</span><span style="color:#2838b0">type</span> <span style="color:#666">===</span> <span style="color:#b83838">&#39;null&#39;</span><span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>right<span style="color:#888">({</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#888">[</span>instr<span style="color:#888">.</span>args<span style="color:#888">[</span><span style="color:#444">0</span><span style="color:#888">]]</span><span style="color:#666">:</span> <span style="color:#444;font-style:italic">null</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>right<span style="color:#888">({</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">[</span>instr<span style="color:#888">.</span>args<span style="color:#888">[</span><span style="color:#444">0</span><span style="color:#888">]]</span><span style="color:#666">:</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>      mode<span style="color:#666">:</span> <span style="color:#b83838">&#39;insensitive&#39;</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#888">[</span>operationsMap<span style="color:#888">[</span>instr<span style="color:#888">.</span>operation <span style="color:#2838b0">as</span> Operation<span style="color:#888">].</span>alias<span style="color:#888">]</span><span style="color:#666">:</span> instr<span style="color:#888">.</span>args<span style="color:#888">[</span><span style="color:#444">1</span><span style="color:#888">],</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">private</span> toWhereSingle<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>  where: <span style="color:#2838b0;font-style:italic">Either</span><span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">RqlWhereOption</span><span style="color:#888">&gt;[],</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">return</span> where
+</span></span><span style="display:flex;"><span>    <span style="color:#888">.</span>filter<span style="color:#888">((</span>wh<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> wh<span style="color:#888">.</span>isRight<span style="color:#888">())</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">.</span>map<span style="color:#888">((</span>wh<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#2838b0">const</span> rawWhere <span style="color:#666">=</span> wh<span style="color:#888">.</span>getRight<span style="color:#888">();</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#2838b0">const</span> key <span style="color:#666">=</span> <span style="color:#388038">Object</span><span style="color:#888">.</span>keys<span style="color:#888">(</span>rawWhere<span style="color:#888">)[</span><span style="color:#444">0</span><span style="color:#888">];</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>      <span style="color:#2838b0">return</span> rawWhere <span style="color:#2838b0">as</span> RqlWhereType<span style="color:#888">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><h4 id="step-5-map-to-the-response">Step 5: Map to the response</h4>
+<p>And we are finally done, we converted raw RQL into data we can use within our PRISMA repository.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0">private</span> toResponse<span style="color:#888">(</span>ctx: <span style="color:#2838b0;font-style:italic">Context</span><span style="color:#888">)</span><span style="color:#666">:</span> Either<span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">RqlResult</span><span style="color:#888">&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>right<span style="color:#888">({</span>
+</span></span><span style="display:flex;"><span>    hardLimit: <span style="color:#2838b0;font-style:italic">ctx.hardLimit</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>    limit: <span style="color:#2838b0;font-style:italic">ctx.limit</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>    offset: <span style="color:#2838b0;font-style:italic">ctx.offset</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>    orderBy: <span style="color:#2838b0;font-style:italic">ctx.orderBy</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>    where: <span style="color:#2838b0;font-style:italic">ctx.where</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div><p>Let’s see how it’s used from within Repository.</p>
+<p>There are more things within the repository not tight to RQL, but I will not go over it.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#2838b0;font-style:italic">@Injectable</span><span style="color:#888">()</span>
+</span></span><span style="display:flex;"><span><span style="color:#2838b0">export</span> <span style="color:#2838b0">class</span> OnboardingRepository <span style="color:#2838b0">extends</span> AbstractRepository<span style="color:#888">&lt;</span><span style="color:#2838b0">Onboarding</span><span style="color:#888">&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">constructor</span><span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">private</span> <span style="color:#2838b0">readonly</span> prisma: <span style="color:#2838b0;font-style:italic">PrismaService</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">private</span> <span style="color:#2838b0">readonly</span> mapper: <span style="color:#2838b0;font-style:italic">OnboardingMapper</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">private</span> <span style="color:#2838b0">readonly</span> rql: <span style="color:#2838b0;font-style:italic">RqlService</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">super</span><span style="color:#888">();</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2838b0">async</span> findAll<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>    rql: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">)</span><span style="color:#666">:</span> Promise<span style="color:#888">&lt;</span><span style="color:#2838b0">Either</span><span style="color:#888">&lt;</span><span style="color:#2838b0">ContextAwareException</span><span style="color:#888">,</span> <span style="color:#388038">PaginatedResponse</span><span style="color:#888">&lt;</span><span style="color:#2838b0">Onboarding</span><span style="color:#888">&gt;&gt;&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2838b0">try</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#2838b0">const</span> columns: <span style="color:#2838b0;font-style:italic">string</span><span style="color:#888">[]</span> <span style="color:#666">=</span> ObjectService<span style="color:#888">.</span>filteredProps<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>        Prisma<span style="color:#888">.</span>OnboardingScalarFieldEnum<span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#888">[],</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      <span style="color:#2838b0">return</span> <span style="color:#2838b0">this</span><span style="color:#888">.</span>rql<span style="color:#888">.</span>parse<span style="color:#888">(</span>rql<span style="color:#888">,</span> columns<span style="color:#888">).</span>bindAsync<span style="color:#888">(</span><span style="color:#2838b0">async</span> <span style="color:#888">(</span>instrs<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#2838b0">const</span> where: <span style="color:#2838b0;font-style:italic">Prisma.OnboardingWhereInput</span> <span style="color:#666">=</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#888">...</span>instrs<span style="color:#888">.</span>where<span style="color:#888">.</span>reduce<span style="color:#888">((</span>acc<span style="color:#888">,</span> curr<span style="color:#888">)</span> <span style="color:#666">=&gt;</span> <span style="color:#888">({</span> <span style="color:#888">...</span>acc<span style="color:#888">,</span> <span style="color:#888">...</span>curr <span style="color:#888">}),</span> <span style="color:#888">{}),</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#888">};</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#2838b0">const</span> <span style="color:#888">[</span>data<span style="color:#888">,</span> totalRecords<span style="color:#888">]</span> <span style="color:#666">=</span> <span style="color:#2838b0">await</span> Promise<span style="color:#888">.</span>all<span style="color:#888">([</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#2838b0">this</span><span style="color:#888">.</span>prisma<span style="color:#888">.</span>onboarding<span style="color:#888">.</span>findMany<span style="color:#888">({</span>
+</span></span><span style="display:flex;"><span>            orderBy: <span style="color:#2838b0;font-style:italic">instrs.orderBy</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>            skip: <span style="color:#2838b0;font-style:italic">instrs.offset</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>            take: <span style="color:#2838b0;font-style:italic">instrs.limit</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>            where<span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#888">}),</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#2838b0">this</span><span style="color:#888">.</span>prisma<span style="color:#888">.</span>onboarding<span style="color:#888">.</span>count<span style="color:#888">({</span> where <span style="color:#888">}),</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#888">]);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>right<span style="color:#888">(</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#2838b0">new</span> PaginatedResponse<span style="color:#888">({</span>
+</span></span><span style="display:flex;"><span>            totalsByStatus: <span style="color:#2838b0;font-style:italic">StatusGroup.fromDbResults</span><span style="color:#888">([],</span> <span style="color:#888">[]),</span>
+</span></span><span style="display:flex;"><span>            count: <span style="color:#2838b0;font-style:italic">data.length</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>            hardLimit: <span style="color:#2838b0;font-style:italic">instrs.hardLimit</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>            limit: <span style="color:#2838b0;font-style:italic">instrs.limit</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>            offset: <span style="color:#2838b0;font-style:italic">instrs.offset</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>            records: <span style="color:#2838b0;font-style:italic">data</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>            total: <span style="color:#2838b0;font-style:italic">totalRecords</span><span style="color:#888">,</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#888">}),</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#888">);</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#888">});</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">}</span> <span style="color:#2838b0">catch</span> <span style="color:#888">(</span>ex<span style="color:#888">)</span> <span style="color:#888">{</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#2838b0">return</span> Either<span style="color:#888">.</span>left<span style="color:#888">(</span><span style="color:#2838b0">this</span><span style="color:#888">.</span>decorateException<span style="color:#888">(</span>ex<span style="color:#888">));</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#888">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#888">}</span>
+</span></span></code></pre></div>
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2frql-nestjs-prisma-search-easy%2f&amp;text=Rql%2bNestjs%2bPrisma%3a%20Search%20Made%20Easy&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2frql-nestjs-prisma-search-easy%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2frql-nestjs-prisma-search-easy%2f&amp;title=Rql%2bNestjs%2bPrisma%3a%20Search%20Made%20Easy" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2frql-nestjs-prisma-search-easy%2f&amp;title=Rql%2bNestjs%2bPrisma%3a%20Search%20Made%20Easy" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2frql-nestjs-prisma-search-easy%2f&amp;title=Rql%2bNestjs%2bPrisma%3a%20Search%20Made%20Easy" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=http%3a%2f%2flocalhost%3a1313%2fposts%2f2025%2frql-nestjs-prisma-search-easy%2f&amp;description=Rql%2bNestjs%2bPrisma%3a%20Search%20Made%20Easy" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+        </ul>
+      
+
+
+      
+      
+      
+      
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      <footer>
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+		
+		  <a href="mailto:tomas@pavlatka.cz" title="Email me">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+		
+		  <a href="https://github.com/tomaspavlatka" title="GitHub">
+		
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Tomas Moya Pavlatka
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2025
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://localhost:1313/">Tomas Moya Pavlatka</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.145.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<script src="http://localhost:1313/js/main.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://localhost:1313/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
