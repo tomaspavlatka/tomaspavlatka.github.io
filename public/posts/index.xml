@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Tomas Moya Pavlatka</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Tomas Moya Pavlatka</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>tomas@pavlatka.cz (Tomas Moya Pavlatka)</managingEditor>
+    <webMaster>tomas@pavlatka.cz (Tomas Moya Pavlatka)</webMaster>
+    <lastBuildDate>Wed, 05 Mar 2025 08:39:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/2025/my-first-post/</link>
+      <pubDate>Wed, 05 Mar 2025 08:39:00 +0100</pubDate><author>tomas@pavlatka.cz (Tomas Moya Pavlatka)</author>
+      <guid>http://localhost:1313/posts/2025/my-first-post/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

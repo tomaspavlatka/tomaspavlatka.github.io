@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Tomas Moya Pavlatka</title>
+    <link>http://localhost:1313/pages/</link>
+    <description>Recent content in Pages on Tomas Moya Pavlatka</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>tomas@pavlatka.cz (Tomas Moya Pavlatka)</managingEditor>
+    <webMaster>tomas@pavlatka.cz (Tomas Moya Pavlatka)</webMaster>
+    <atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/pages/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>tomas@pavlatka.cz (Tomas Moya Pavlatka)</author>
+      <guid>http://localhost:1313/pages/about/</guid>
+      <description>&lt;p&gt;My name is Tomas Moya Pavlatka.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

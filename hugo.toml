@@ -1,0 +1,41 @@
+baseURL = 'https://tomaspavlatka.github.io/'
+languageCode = 'en-us'
+title = 'Tomas Moya Pavlatka'
+theme = 'beautifulhugo'
+
+[Params]
+  subtitle = "The journey of mastering new skills starts by tackling today's challenges head-on."
+  mainSections = ["post","posts"]
+  logo = "img/tomas_pavlatka_profile.jpeg" # Expecting square dimensions
+  favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = true
+  readingTime = true
+  wordCount = true
+  useHLJS = true
+  socialShare = true
+  delayDisqus = true
+  showRelatedPosts = true
+
+[Params.author]
+  # Set only your "username" for default hosts and full URLs otherwise (e.g., "https://MyGitLab.org/username")
+  name = "Tomas Moya Pavlatka"
+  email = "tomas@pavlatka.cz"
+  github = "tomaspavlatka"
+
+[[menu.main]]
+    name = "Blog"
+    url = ""
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "pages/about/"
+    weight = 2
+
+[[menu.main]]
+    name = "Let's connect"
+    url = "pages/lets-connect/"
+    weight = 3
