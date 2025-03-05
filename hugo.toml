@@ -21,6 +21,7 @@ theme = 'beautifulhugo'
 
 [Params]
   subtitle = "The journey of mastering new skills starts by tackling today's challenges head-on."
+  homeTitle = "Tomas Moya Pavlatka" 
   mainSections = ["post","posts"]
   logo = "img/tomas_pavlatka_profile.jpeg" # Expecting square dimensions
   favicon = "img/favicon.ico"
