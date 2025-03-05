@@ -1,0 +1,7 @@
+{% comment %}
+*
+*  Use this include to use ads inbetween your posts
+*
+{% endcomment %}<div class="border-dotted text-center">
+  <img src="https://placehold.co/336x280?text=Ad+Space&font=sourcepro" alt="">
+</div>
