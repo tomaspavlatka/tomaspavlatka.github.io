@@ -4,6 +4,7 @@ draft = false
 title = 'Start with split keyboard, again'
 +++
 
+![Keyboardio Model 01](/img/keyboardio-model-01.jpeg)
 I like to try new things, I love to take on a new challenge. And using s0lit keyboard was and is one of my todo list for a while now. I have tried ti many times in the past, only to find myself going back to normal keyboard every time. I do not like this, I do not like when I set a goal for myself and I fail. Regardless of what the actual reason for the failure is, it must not stop me from trying even harder next time.
 
 So as my x-attempt, I will do my best to not fail this time. 
