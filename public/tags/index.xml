@@ -8,6 +8,21 @@
     <language>en-us</language>
     <managingEditor>tomas@pavlatka.cz (Tomas Moya Pavlatka)</managingEditor>
     <webMaster>tomas@pavlatka.cz (Tomas Moya Pavlatka)</webMaster>
+    <lastBuildDate>Tue, 11 Mar 2025 07:50:41 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nestjs</title>
+      <link>http://localhost:1313/tags/nestjs/</link>
+      <pubDate>Tue, 11 Mar 2025 07:50:41 +0100</pubDate><author>tomas@pavlatka.cz (Tomas Moya Pavlatka)</author>
+      <guid>http://localhost:1313/tags/nestjs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Swagger</title>
+      <link>http://localhost:1313/tags/swagger/</link>
+      <pubDate>Tue, 11 Mar 2025 07:50:41 +0100</pubDate><author>tomas@pavlatka.cz (Tomas Moya Pavlatka)</author>
+      <guid>http://localhost:1313/tags/swagger/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

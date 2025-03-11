@@ -8,14 +8,21 @@
     <language>en-us</language>
     <managingEditor>tomas@pavlatka.cz (Tomas Moya Pavlatka)</managingEditor>
     <webMaster>tomas@pavlatka.cz (Tomas Moya Pavlatka)</webMaster>
-    <lastBuildDate>Mon, 10 Mar 2025 12:19:46 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 11 Mar 2025 07:50:41 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nestjs Swagger Made Easy</title>
+      <link>http://localhost:1313/posts/2025/nestjs-swagger-made-easy/</link>
+      <pubDate>Tue, 11 Mar 2025 07:50:41 +0100</pubDate><author>tomas@pavlatka.cz (Tomas Moya Pavlatka)</author>
+      <guid>http://localhost:1313/posts/2025/nestjs-swagger-made-easy/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;&#34;&gt;NestJS&lt;/a&gt; is a great tool to run your API, &lt;a href=&#34;&#34;&gt;Swagger&lt;/a&gt; is a great tool to document it, but adding this two together might bring a lot of duplications.&lt;/p&gt;&#xA;&lt;p&gt;In the following page, we will come up with solution, that we remove the duplication without losing any power that comes with Swagger.&lt;/p&gt;&#xA;&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;I assume, that you already have swagger and NestJS glued together. There are plenty of instructions out there already.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Start with split keyboard, again</title>
       <link>http://localhost:1313/posts/2025/start-with-split-keyboard/</link>
       <pubDate>Mon, 10 Mar 2025 12:19:46 +0100</pubDate><author>tomas@pavlatka.cz (Tomas Moya Pavlatka)</author>
       <guid>http://localhost:1313/posts/2025/start-with-split-keyboard/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/keyboardio-model-01.jpeg&#34; alt=&#34;Keyboardio Model 01&#34;&gt;&#xA;I like to try new things, I love to take on a new challenge. And using s0lit keyboard was and is one of my todo list for a while now. I have tried ti many times in the past, only to find myself going back to normal keyboard every time. I do not like this, I do not like when I set a goal for myself and I fail. Regardless of what the actual reason for the failure is, it must not stop me from trying even harder next time.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/keyboardio-model-01.jpeg&#34; alt=&#34;Keyboardio Model 01&#34;&gt;&#xA;I like to try new things, I love to take on a new challenge. And using split keyboard was and is one of my todo list for a while now. I have tried ti many times in the past, only to find myself going back to normal keyboard every time. I do not like this, I do not like when I set a goal for myself and I fail. Regardless of what the actual reason for the failure is, it must not stop me from trying even harder next time.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Rql&#43;Nestjs&#43;Prisma: Search Made Easy</title>
