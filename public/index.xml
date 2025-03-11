@@ -15,7 +15,7 @@
       <link>http://localhost:1313/posts/2025/nestjs-swagger-made-easy/</link>
       <pubDate>Tue, 11 Mar 2025 07:50:41 +0100</pubDate><author>tomas@pavlatka.cz (Tomas Moya Pavlatka)</author>
       <guid>http://localhost:1313/posts/2025/nestjs-swagger-made-easy/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;&#34;&gt;NestJS&lt;/a&gt; is a great tool to run your API, &lt;a href=&#34;&#34;&gt;Swagger&lt;/a&gt; is a great tool to document it, but adding this two together might bring a lot of duplications.&lt;/p&gt;&#xA;&lt;p&gt;In the following page, we will come up with solution, that we remove the duplication without losing any power that comes with Swagger.&lt;/p&gt;&#xA;&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;I assume, that you already have swagger and NestJS glued together. There are plenty of instructions out there already.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://nestjs.com/&#34;&gt;NestJS&lt;/a&gt; is a great tool to run your API, &lt;a href=&#34;https://swagger.io/docs/&#34;&gt;Swagger&lt;/a&gt; is a great tool to document it, but adding this two together might bring a lot of duplications.&lt;/p&gt;&#xA;&lt;p&gt;In the following page, we will come up with solution, that we remove the duplication without losing any power that comes with Swagger.&lt;/p&gt;&#xA;&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;I assume, that you already have swagger and NestJS glued together. There are plenty of instructions out there already.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Start with split keyboard, again</title>

@@ -4,7 +4,7 @@ date = '2025-03-11T07:50:41+01:00'
 tags = ['nestjs', 'swagger']
 +++
 
-[NestJS]() is a great tool to run your API, [Swagger]() is a great tool to document it, but adding this two together might bring a lot of duplications.
+[NestJS](https://nestjs.com/) is a great tool to run your API, [Swagger](https://swagger.io/docs/) is a great tool to document it, but adding this two together might bring a lot of duplications.
 
 In the following page, we will come up with solution, that we remove the duplication without losing any power that comes with Swagger.
 
@@ -66,7 +66,7 @@ And let's imagine, that we have another function within the same controller. We 
 If we really think about this, we usually need to change these things
 
 - summary of the endpoint
-- desription of the enpoint
+- des of the enpoint
 - reference of the success endpoint
 
 The rest of the data stays the same, so we can remove the duplications
