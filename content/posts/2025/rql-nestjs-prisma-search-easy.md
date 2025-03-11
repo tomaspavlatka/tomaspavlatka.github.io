@@ -2,6 +2,7 @@
 date = '2025-02-19T09:24:46+01:00'
 draft = false
 title = 'Rql+Nestjs+Prisma: Search Made Easy'
+tags = ['nestjs', 'prisma', 'rql']
 +++
 
 When you build API, you will always come to the state, where you will have to search among data which exists within your system. There are already standards how to deal with GET query parameters, such as
