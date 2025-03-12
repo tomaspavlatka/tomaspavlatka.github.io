@@ -3,6 +3,12 @@ languageCode = 'en-us'
 title = 'Tomas Moya Pavlatka'
 theme = 'beautifulhugo'
 
+[sitemap]
+
+[services]
+  [services.disqus]
+    shortname = 'tomaspavlatka'
+
 [markup]
   [markup.highlight]
     anchorLineNos = false
