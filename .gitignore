@@ -1,2 +1,6 @@
-.DS_Store
-public
+*.test
+imports.*
+dist/
+public/
+themes/
+.DS_Store 
