@@ -69,11 +69,6 @@ theme = 'beautifulhugo'
     weight = 4
 
 [[menu.main]]
-    name = "Daily motivations"
-    url = "daily-motivations/"
-    weight = 5
-
-[[menu.main]]
     name = "Let's connect"
     url = "pages/lets-connect/"
     weight = 6
