@@ -47,6 +47,8 @@ theme = 'beautifulhugo'
   name = "Tomas Moya Pavlatka"
   email = "tomas@pavlatka.cz"
   github = "tomaspavlatka"
+  linkedin = "tomas-moya-pavlatka"
+
 
 [[menu.main]]
     name = "Blog"
