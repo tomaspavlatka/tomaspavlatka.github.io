@@ -1,4 +1,4 @@
-baseURL = 'https://tomaspavlatka.github.io/'
+baseURL = 'https://pavlatka.cz/'
 languageCode = 'en-us'
 title = 'Tomas Moya Pavlatka'
 theme = 'beautifulhugo'
