@@ -1,6 +1,8 @@
 ---
-title: Certificates
+title: "Certificates"
 comments: false
+menu: topnav
+showDate: false
 ---
 
 ## Certificates of completion

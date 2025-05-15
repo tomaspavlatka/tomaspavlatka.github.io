@@ -1,9 +1,9 @@
 baseURL = 'https://pavlatka.cz/'
 languageCode = 'en-us'
 title = 'Tomas Moya Pavlatka'
-theme = 'beautifulhugo'
+theme = 'bilberry-hugo-theme/v4'
 
-[sitemap]
+[lsitemap]
 
 [services]
   [services.disqus]
@@ -30,9 +30,11 @@ theme = 'beautifulhugo'
   homeTitle = "Tomas Moya Pavlatka" 
   mainSections = ["post","posts"]
   logo = "img/tomas_pavlatka_profile.jpeg" # Expecting square dimensions
+  customImage = "img/tomas_pavlatka_profile.jpeg" # Expecting square dimensions
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
   commit = false
+  stickyNav = true
   rss = true
   comments = true
   readingTime = true
@@ -41,6 +43,13 @@ theme = 'beautifulhugo'
   socialShare = true
   delayDisqus = true
   showRelatedPosts = true
+  # Enable / Disable algolia search
+  algolia_search    = true
+  algolia_appId     = "WFXNT2GLID"
+  algolia_apiKey    = "4fd874a7c7795a13442fa6a20b21f354"
+  algolia_indexName = "tomas_pavlatka_articles"
+  # Set this option to false if you want to search within all articles in all languages at once
+  algolia_currentLanguageOnly = true
 
 [Params.author]
   # Set only your "username" for default hosts and full URLs otherwise (e.g., "https://MyGitLab.org/username")
@@ -48,29 +57,3 @@ theme = 'beautifulhugo'
   email = "tomas@pavlatka.cz"
   github = "tomaspavlatka"
   linkedin = "tomas-moya-pavlatka"
-
-
-[[menu.main]]
-    name = "Blog"
-    url = ""
-    weight = 1
-
-[[menu.main]]
-    name = "About"
-    url = "pages/about/"
-    weight = 2
-
-[[menu.main]]
-    name = "CV"
-    url = "pages/cv/"
-    weight = 3
-
-[[menu.main]]
-    name = "Certificates"
-    url = "pages/certificates/"
-    weight = 4
-
-[[menu.main]]
-    name = "Let's connect"
-    url = "pages/lets-connect/"
-    weight = 6

@@ -2,6 +2,7 @@
 title: About me
 subtitle: Senior Backend Engineer | SaaS & E-commerce | AWS, Kafka, Microservices
 comments: false
+menu: topnav
 ---
 
 Hi, I’m Tomas – a Senior Backend Engineer with 15+ years of experience in software development. I specialize in designing and optimizing high-performance, scalable systems that drive business growth.

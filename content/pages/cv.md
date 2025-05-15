@@ -1,6 +1,8 @@
 ---
-title: CV, Curriculum vitae
+title: CV
 comments: false
+menu: topnav
+showDate: false
 ---
 
 ## Work Experience

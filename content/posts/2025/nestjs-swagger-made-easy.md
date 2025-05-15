@@ -2,6 +2,7 @@
 title = 'Nestjs Swagger Made Easy'
 date = '2025-03-11T07:50:41+01:00'
 tags = ['nestjs', 'swagger']
+draft = true
 +++
 
 [NestJS](https://nestjs.com/) is a great tool to run your API, [Swagger](https://swagger.io/docs/) is a great tool to document it, but adding this two together might bring a lot of duplications.
