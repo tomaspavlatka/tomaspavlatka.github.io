@@ -5,6 +5,8 @@ tags = ['zolar', 'get-your-guide', 'job-switch']
 draft = true
 +++
 
+![Thank you zolar, welcome GetYourGuide](/img/zolar-to-getyourguide.jpg)
+
 One of the saying goes like this. _The end of one journey is a beginning of another one._
 
 After more than 2 years at [zolar](https://zolar.com/), it is time to say THANK YOU and explore another challenges, this time at [GetYourGuide](https://www.getyourguide.com/). But let's take it easy.
