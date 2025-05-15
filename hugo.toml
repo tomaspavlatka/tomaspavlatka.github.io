@@ -50,6 +50,12 @@ copyrightBy = "Tomas Moya Pavlatka"
   algolia_apiKey    = "4fd874a7c7795a13442fa6a20b21f354"
   algolia_indexName = "tomas_pavlatka_articles"
 
+  showSocialMedia = true
+  socialMediaLinks = [
+    { link = "https://www.linkedin.com/in/tomas-moya-pavlatka/", icon = "fab fa-linkedin", rel = "me" },
+    { link = "https://github.com/tomaspavlatka", icon = "fab fa-github" },
+  ]
+
 [Params.author]
   # Set only your "username" for default hosts and full URLs otherwise (e.g., "https://MyGitLab.org/username")
   name = "Tomas Moya Pavlatka"
