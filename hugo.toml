@@ -26,7 +26,8 @@ theme = 'bilberry-hugo-theme/v4'
     wrapperClass = 'highlight'
 
 [Params]
-copyrightBy = "Tomas Moya Pavlatka"
+  copyrightBy = "Tomas Moya Pavlatka"
+  copyrightUrl = "https://www.linkedin.com/in/tomas-moya-pavlatka/"
   subtitle = "The journey of mastering new skills starts by tackling today's challenges head-on."
   description = "The journey into the head and mind of software engineer"
   keywords = "software engineer, neovim, java, typescript"
