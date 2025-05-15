@@ -3,6 +3,7 @@ title: CV
 comments: false
 menu: topnav
 showDate: false
+excludeFromIndex: true
 ---
 
 ## Work Experience

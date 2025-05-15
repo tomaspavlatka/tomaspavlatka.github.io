@@ -3,6 +3,7 @@ title: "Certificates"
 comments: false
 menu: topnav
 showDate: false
+excludeFromIndex: true
 ---
 
 ## Certificates of completion
