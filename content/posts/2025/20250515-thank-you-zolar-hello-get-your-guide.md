@@ -2,7 +2,6 @@
 title = 'Thank you zolar, hello GetYourGuide'
 date = '2025-05-14T06:01:41+01:00'
 tags = ['zolar', 'get-your-guide', 'job-switch']
-draft = true
 +++
 
 ![Thank you zolar, welcome GetYourGuide](/img/zolar-to-getyourguide.jpg)
